@@ -10,5 +10,7 @@ urlpatterns = [
     path('<int:movie_id>/', views.detail_movie, name='detail'), # adicione esta linha
     path('update/<int:movie_id>/', views.update_movie, name='update'), # adicione esta linha
     path('delete/<int:movie_id>/', views.delete_movie, name='delete'), # adicione esta linha
-     path('<int:movie_id>/review/', views.create_review, name='review'), # adicione esta linha
+    path('<int:movie_id>/review/', views.create_review, name='review'), # adicione esta linha
+    path('lists/', views.ListListView.as_view(), name='lists'), # adicione esta linha
+    path('lists/create', views.ListCreateView.as_view(), name='create-list'), # adicione esta linha
 ]
